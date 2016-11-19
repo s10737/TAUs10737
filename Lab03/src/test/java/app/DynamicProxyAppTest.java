@@ -1,4 +1,4 @@
-package com.example.mockdemo.app;
+package app;
 
 import static org.hamcrest.CoreMatchers.either;
 import static org.hamcrest.CoreMatchers.equalTo;
@@ -11,10 +11,11 @@ import java.lang.reflect.Proxy;
 
 import org.junit.Test;
 
-import com.example.mockdemo.messenger.ConnectionStatus;
-import com.example.mockdemo.messenger.MalformedRecipientException;
-import com.example.mockdemo.messenger.MessageService;
-import com.example.mockdemo.messenger.SendingStatus;
+import app.Messenger;
+import messenger.ConnectionStatus;
+import messenger.MalformedRecipientException;
+import messenger.MessageService;
+import messenger.SendingStatus;
 
 public class DynamicProxyAppTest {
 

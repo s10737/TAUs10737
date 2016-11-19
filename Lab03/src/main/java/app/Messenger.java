@@ -1,8 +1,8 @@
-package com.example.mockdemo.app;
+package app;
 
-import com.example.mockdemo.messenger.MalformedRecipientException;
-import com.example.mockdemo.messenger.MessageService;
-import com.example.mockdemo.messenger.SendingStatus;
+import messenger.MalformedRecipientException;
+import messenger.MessageService;
+import messenger.SendingStatus;
 
 public class Messenger {
 

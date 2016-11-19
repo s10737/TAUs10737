@@ -1,4 +1,4 @@
-package com.example.mockdemo.messenger;
+package messenger;
 
 public enum ConnectionStatus {	
 	SUCCESS, FAILURE	

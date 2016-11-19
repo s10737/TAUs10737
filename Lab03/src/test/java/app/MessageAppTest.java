@@ -1,11 +1,12 @@
-package com.example.mockdemo.app;
+package app;
 
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 
 import org.junit.Test;
 
-import com.example.mockdemo.messenger.MessageServiceSimpleImpl;
+import app.Messenger;
+import messenger.MessageServiceSimpleImpl;
 
 public class MessageAppTest {
 

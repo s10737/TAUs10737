@@ -1,4 +1,4 @@
-package com.example.mockdemo.messenger;
+package messenger;
 
 public class MalformedRecipientException extends Exception {
 
