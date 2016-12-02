@@ -15,7 +15,7 @@ public class EasyMock {
 		case SUCCESS:
 			return 0;
 		}
-		return 1;
+		return 1 ;
 	}
 
 	public int sendMessage(String server, String message) {
