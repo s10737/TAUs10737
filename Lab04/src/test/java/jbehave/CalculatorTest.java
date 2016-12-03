@@ -1,42 +1,33 @@
 package jbehave;
 
-import static org.junit.Assert.*;
-import org.junit.Test;
+import org.jbehave.core.configuration.Configuration;
+import org.jbehave.core.configuration.MostUsefulConfiguration;
+import org.jbehave.core.io.LoadFromClasspath;
+import org.jbehave.core.junit.JUnitStory;
+import org.jbehave.core.reporters.Format;
+import org.jbehave.core.reporters.StoryReporterBuilder;
+import org.jbehave.core.steps.InjectableStepsFactory;
+import org.jbehave.core.steps.InstanceStepsFactory;
 
-import jbehave.Calculator;
+public class CalculatorTest extends JUnitStory {
 
-public class CalculatorTest {
-
-	//SUT
-	Calculator calculator = new Calculator();
-	
-	@Test
-	public void addCheck() {
-		assertEquals(5, calculator.add(2,3));
+	// Here we specify the configuration, starting from default
+	// MostUsefulConfiguration, and changing only what is needed
+	@Override
+	public Configuration configuration() {
+		return new MostUsefulConfiguration()
+		// where to find the stories
+				.useStoryLoader(new LoadFromClasspath(this.getClass()))
+				// CONSOLE and TXT reporting
+				.useStoryReporterBuilder(
+						new StoryReporterBuilder().withDefaultFormats()
+								.withFormats(Format.CONSOLE, Format.TXT));
 	}
 
-	@Test
-	public void subCheck() {
-		assertEquals(1, calculator.sub(3,2));
-	}
-	
-	@Test
-	public void multiCheck() {
-		assertEquals(6, calculator.multi(3,2));
-	}
-	
-	@Test
-	public void divCheck() {
-		assertEquals(2, calculator.div(4,2));
-	}
-	
-	@Test 
-	public void divByZeroCheck() {
-		assertEquals(0, calculator.div(3, 0));
-	}
-	
-	@Test
-	public void greaterCheck() {
-		assertEquals(true, calculator.greater(30, 2));
+	// Here we specify the steps classes
+	@Override
+	public InjectableStepsFactory stepsFactory() {
+		// varargs, can have more that one steps classes
+		return new InstanceStepsFactory(configuration(), new CalculatorSteps());
 	}
 }
