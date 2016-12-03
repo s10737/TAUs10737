@@ -7,6 +7,9 @@ Then the result should be X
 Given a LiczbaRzymska with argument 101
 Then the result should be CI
 
+Given a LiczbaRzymska with argument 1500
+Then the result should be MD
+
 Given a LiczbaRzymska with argument 2016
 Then the result should be MMVI
 
