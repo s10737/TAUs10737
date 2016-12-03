@@ -12,8 +12,8 @@ Then adding should return 0
 When set arguments to 10.3 and 3.2
 Then subtracting should return 7.1
 
-When set arguments to 2 and 8
-Then subtracting should return -6
+When set arguments to 2.5 and 8.2
+Then subtracting should return -5.7
 
 When set arguments to 4.5 and 4.5
 Then subtracting should return 0
