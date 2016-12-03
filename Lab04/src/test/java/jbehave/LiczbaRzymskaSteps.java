@@ -10,11 +10,11 @@ public class LiczbaRzymskaSteps {
 	private LiczbaRzymska liczbaRzymska;
 	
 	@Given("a liczbaRzymska with argument $liczba")
-	public void liczbaRzymskaSetUp(int liczba) {
+	public void liczbaRzymskaSetup(int liczba) {
 			liczbaRzymska = new LiczbaRzymska(liczba);
 	}
 	@Then("the result should be $roman")
-	public void performToString(String roman){
+	public void ShouldBeString(String roman){
 		assertEquals(roman, liczbaRzymska.toString());
 	}
 }
