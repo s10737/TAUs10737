@@ -1,4 +1,4 @@
-package zad3;
+package jbehave;
 
 public class LiczbaRzymska {
 private int liczba;

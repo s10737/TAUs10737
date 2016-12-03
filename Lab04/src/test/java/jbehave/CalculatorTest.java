@@ -1,8 +1,9 @@
-package zad1ab;
+package jbehave;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
-import zad1ab.Calculator;
+
+import jbehave.Calculator;
 
 public class CalculatorTest {
 

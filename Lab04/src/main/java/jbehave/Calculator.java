@@ -1,4 +1,4 @@
-package zad1ab;
+package jbehave;
 
 public class Calculator {
 	

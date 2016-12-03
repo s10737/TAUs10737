@@ -1,13 +1,14 @@
-package zad2;
+package jbehave;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
-import zad2.Calculator;
 
-public class CalculatorTest {
+import jbehave.Calculator2;
+
+public class Calculator2Test {
 
 	//SUT
-	Calculator calculator = new Calculator();
+	Calculator2 calculator = new Calculator2();
 	
 	@Test
 	public void addCheck() {
