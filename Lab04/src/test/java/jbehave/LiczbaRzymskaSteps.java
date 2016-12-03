@@ -14,7 +14,7 @@ public class LiczbaRzymskaSteps {
 			liczbaRzymska = new LiczbaRzymska(liczba);
 	}
 	@Then("the result should be $roman")
-	public void ShouldBeString(String roman){
+	public void ShouldBeRoman(String roman){
 		assertEquals(roman, liczbaRzymska.toString());
 	}
 }
