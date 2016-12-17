@@ -11,7 +11,7 @@ public class Calculator2Steps {
 	private Calculator2 calc;
 	
 	@Given("a calculator")
-	public void calulatorSetup(){
+	public void calculatorSetup(){
 		calc = new Calculator2();
 	}
 	
