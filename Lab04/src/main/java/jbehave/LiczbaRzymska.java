@@ -11,7 +11,7 @@ private int liczba;
 	public String toString() {
 		String ciag = "";
 		if(liczba>0 && liczba<=10){
-			while (liczba > 10) {
+			while (liczba >= 10) {
 				ciag += "X";
 				liczba -= 10;
 			}

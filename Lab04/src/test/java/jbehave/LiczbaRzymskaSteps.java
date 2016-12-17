@@ -10,7 +10,7 @@ public class LiczbaRzymskaSteps {
 	private LiczbaRzymska roman;
 	
 	@Given("a number $liczba")
-	public void liczbaRzymskaSetup(int liczba){
+	public void liczbaRzymskaCheck(int liczba){
 		roman = new LiczbaRzymska(liczba);
 	}
 	
