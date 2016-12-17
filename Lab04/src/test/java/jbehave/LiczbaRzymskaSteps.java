@@ -1,6 +1,8 @@
 package jbehave;
 
+import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
 
 import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.Then;
@@ -26,6 +28,6 @@ public class LiczbaRzymskaSteps {
 	
     @Then("we should get a message $result")
 	public void wrongliczbaRzymskaResult(String result){
-    	assertEquals(result, roman.toString());
+    	assertThat(roman.toString(),is(result));
 	}
 }
