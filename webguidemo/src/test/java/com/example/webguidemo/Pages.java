@@ -28,7 +28,7 @@ public class Pages {
 		return home;
 	}
 	
-	public Signup register(){
+	public Signup signup(){
 		if (register == null) {
 			register = new Signup(driverProvider);
 		}

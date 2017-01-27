@@ -32,23 +32,23 @@ public class HelionSteps {
  
     @Then("Sign up page is shown")
     public void signupPageIsShown(){
-       assertEquals("Co zyskasz zak³adaj¹c konto w helion.pl? - Wydawnictwo Helion, ksiêgarnia internetowa informatyczna helion.pl", pages.register().getTitle());
+       assertEquals("Co zyskasz zak³adaj¹c konto w helion.pl? - Wydawnictwo Helion, ksiêgarnia internetowa informatyczna helion.pl", pages.signup().getTitle());
     }	
     
 	@Given("user is on Sign up page")
     public void userIsOnSignupPage(){   
 		pages.tenMinutesEmail().open();
 		email = pages.tenMinutesEmail().getEmailAddress();
-		pages.register().open();   
+		pages.signup().open();   
     }
  
     @When("user signs up")
     public void userSignsup(){        
-    	pages.register().registerAs(email, PASSWORD); 
+    	pages.signup().registerAs(email, PASSWORD); 
     }
  
     @Then("activation page is shown")
     public void activationPageIsShown(){
-    	assertEquals("Co zyskasz zak³adaj¹c konto w helion.pl? - Wydawnictwo Helion, ksiêgarnia internetowa informatyczna helion.pl", pages.register().getTitle());
+    	assertEquals("Co zyskasz zak³adaj¹c konto w helion.pl? - Wydawnictwo Helion, ksiêgarnia internetowa informatyczna helion.pl", pages.signup().getTitle());
     }
 }
